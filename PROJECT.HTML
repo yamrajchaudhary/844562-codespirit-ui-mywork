@@ -1,0 +1,733 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+  .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: aqua;
+
+   
+}
+input, label {
+  margin: 5px 5px;
+}
+
+.form-group {
+  margin: 30px auto;
+  width: 450px;
+}
+
+.form-control {
+  float: left;
+}
+
+#inputStreet {
+  width: 100%;
+}
+
+#inputCity {
+  width: 50%;
+}
+
+#inputState {
+  width: 15%;
+}
+
+#inputZip {
+  width: 28%;
+}
+
+#inputCounty {
+  width: 45%;
+}
+
+#inputCountry {
+  width: 50%;
+}
+
+</style>
+</head>
+<body background="https://lh6.googleusercontent.com/proxy/3akeCy6a7aAmMdWaHg4qbHo-DdHhmE7PTvd3rLu6jQwOo3xDEl8TQwIQba_fIssCrSgKIW8DM9lLp4RiRO2DzkVxOEUOGJ44zOGU">
+ 
+
+<nav class="navbar navbar-expand bg-dark">
+ <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="myhome.html">Home</a>
+  <a href="PROJECT.html">PlaceAppointment</a>
+  <a href="appoint.html">ViewAppointment</a>
+  <a href="contact.html">ContactUs</a>
+</div>
+<br/>
+     <div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+
+    
+</div>      
+               <img src="logo.jpg" class="img-circle" alt="logo"
+width=5%" height="50px">
+
+   <a class="navbar-brand" href="front.html" data-activates="slide-out"></a>
+
+
+</span></a>
+ </div>
+<div class="navbar-header">
+
+
+
+  
+     <ul class="navbar-nav">
+    <!-- <img src="C:\Users\HI\Desktop" alt=LOGO width="10px" height="10px align-left"> -->
+    <li class="nav-item">
+      <a class="nav-link" href="myhome.html">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="PROJECT.HTML">PLACE APPOINTMENT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="appoint.html">VIEW APPOINTMENT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">CONTACT US</a>
+    </li>
+  </ul>
+
+</nav>
+
+
+
+<div class="container">
+<div class="jumbotron">
+
+<form>
+<div class="form-group">
+      <label for="usr" >Name:</label>
+<br/>
+
+      <input type="text" class="form-control col-md-4" id="usr" placeholder="FirstName">
+
+
+<input type="text" class="form-control col-md-4" id="usr" placeholder="LastName" style="margin-left:50px">
+<br/>
+
+</div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" required>
+    </div>
+
+<div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control"onclick="validateAge(age)" id="age" required>
+    </div>
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1"onchange="email_validate(this.value)" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+<div class="form-group">
+      <label for="phone">Phone No:</label>
+      <input type="phoneno" class="form-control" id="phone" pattern="[0-9]"
+       required>
+    </div>
+
+<br/>
+ 
+<div class="form-group">
+<div class="card">
+  <div class="card-body">
+ <label for="Address">Address</label>
+  <input type="street" 
+         class="form-control" 
+         id="autocomplete" 
+         placeholder="Street">
+  
+  <input type="city" 
+         class="form-control" 
+         id="inputCity" 
+         placeholder="City">
+  
+  <input type="state" 
+         class="form-control" 
+         id="inputState" 
+         placeholder="State">
+  
+  <input type="zip" 
+         class="form-control" 
+         id="inputZip" 
+         placeholder="Zip">
+  
+  
+ 
+          
+        
+ <select id="country" class="form-control" name="country"
+   <option value="Afganistan">Afghanistan</option>
+   <option value="Albania">Albania</option>
+   <option value="Algeria">Algeria</option>
+   <option value="American Samoa">American Samoa</option>
+   <option value="Andorra">Andorra</option>
+   <option value="Angola">Angola</option>
+   <option value="Anguilla">Anguilla</option>
+   <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+   <option value="Argentina">Argentina</option>
+   <option value="Armenia">Armenia</option>
+   <option value="Aruba">Aruba</option>
+   <option value="Australia">Australia</option>
+   <option value="Austria">Austria</option>
+   <option value="Azerbaijan">Azerbaijan</option>
+   <option value="Bahamas">Bahamas</option>
+   <option value="Bahrain">Bahrain</option>
+   <option value="Bangladesh">Bangladesh</option>
+   <option value="Barbados">Barbados</option>
+   <option value="Belarus">Belarus</option>
+   <option value="Belgium">Belgium</option>
+   <option value="Belize">Belize</option>
+   <option value="Benin">Benin</option>
+   <option value="Bermuda">Bermuda</option>
+   <option value="Bhutan">Bhutan</option>
+   <option value="Bolivia">Bolivia</option>
+   <option value="Bonaire">Bonaire</option>
+   <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+   <option value="Botswana">Botswana</option>
+   <option value="Brazil">Brazil</option>
+   <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+   <option value="Brunei">Brunei</option>
+   <option value="Bulgaria">Bulgaria</option>
+   <option value="Burkina Faso">Burkina Faso</option>
+   <option value="Burundi">Burundi</option>
+   <option value="Cambodia">Cambodia</option>
+   <option value="Cameroon">Cameroon</option>
+   <option value="Canada">Canada</option>
+   <option value="Canary Islands">Canary Islands</option>
+   <option value="Cape Verde">Cape Verde</option>
+   <option value="Cayman Islands">Cayman Islands</option>
+   <option value="Central African Republic">Central African Republic</option>
+   <option value="Chad">Chad</option>
+   <option value="Channel Islands">Channel Islands</option>
+   <option value="Chile">Chile</option>
+   <option value="China">China</option>
+   <option value="Christmas Island">Christmas Island</option>
+   <option value="Cocos Island">Cocos Island</option>
+   <option value="Colombia">Colombia</option>
+   <option value="Comoros">Comoros</option>
+   <option value="Congo">Congo</option>
+   <option value="Cook Islands">Cook Islands</option>
+   <option value="Costa Rica">Costa Rica</option>
+   <option value="Cote DIvoire">Cote DIvoire</option>
+   <option value="Croatia">Croatia</option>
+   <option value="Cuba">Cuba</option>
+   <option value="Curaco">Curacao</option>
+   <option value="Cyprus">Cyprus</option>
+   <option value="Czech Republic">Czech Republic</option>
+   <option value="Denmark">Denmark</option>
+   <option value="Djibouti">Djibouti</option>
+   <option value="Dominica">Dominica</option>
+   <option value="Dominican Republic">Dominican Republic</option>
+   <option value="East Timor">East Timor</option>
+   <option value="Ecuador">Ecuador</option>
+   <option value="Egypt">Egypt</option>
+   <option value="El Salvador">El Salvador</option>
+   <option value="Equatorial Guinea">Equatorial Guinea</option>
+   <option value="Eritrea">Eritrea</option>
+   <option value="Estonia">Estonia</option>
+   <option value="Ethiopia">Ethiopia</option>
+   <option value="Falkland Islands">Falkland Islands</option>
+   <option value="Faroe Islands">Faroe Islands</option>
+   <option value="Fiji">Fiji</option>
+   <option value="Finland">Finland</option>
+   <option value="France">France</option>
+   <option value="French Guiana">French Guiana</option>
+   <option value="French Polynesia">French Polynesia</option>
+   <option value="French Southern Ter">French Southern Ter</option>
+   <option value="Gabon">Gabon</option>
+   <option value="Gambia">Gambia</option>
+   <option value="Georgia">Georgia</option>
+   <option value="Germany">Germany</option>
+   <option value="Ghana">Ghana</option>
+   <option value="Gibraltar">Gibraltar</option>
+   <option value="Great Britain">Great Britain</option>
+   <option value="Greece">Greece</option>
+   <option value="Greenland">Greenland</option>
+   <option value="Grenada">Grenada</option>
+   <option value="Guadeloupe">Guadeloupe</option>
+   <option value="Guam">Guam</option>
+   <option value="Guatemala">Guatemala</option>
+   <option value="Guinea">Guinea</option>
+   <option value="Guyana">Guyana</option>
+   <option value="Haiti">Haiti</option>
+   <option value="Hawaii">Hawaii</option>
+   <option value="Honduras">Honduras</option>
+   <option value="Hong Kong">Hong Kong</option>
+   <option value="Hungary">Hungary</option>
+   <option value="Iceland">Iceland</option>
+   <option value="Indonesia">Indonesia</option>
+   <option value="India">India</option>
+   <option value="Iran">Iran</option>
+   <option value="Iraq">Iraq</option>
+   <option value="Ireland">Ireland</option>
+   <option value="Isle of Man">Isle of Man</option>
+   <option value="Israel">Israel</option>
+   <option value="Italy">Italy</option>
+   <option value="Jamaica">Jamaica</option>
+   <option value="Japan">Japan</option>
+   <option value="Jordan">Jordan</option>
+   <option value="Kazakhstan">Kazakhstan</option>
+   <option value="Kenya">Kenya</option>
+   <option value="Kiribati">Kiribati</option>
+   <option value="Korea North">Korea North</option>
+   <option value="Korea Sout">Korea South</option>
+   <option value="Kuwait">Kuwait</option>
+   <option value="Kyrgyzstan">Kyrgyzstan</option>
+   <option value="Laos">Laos</option>
+   <option value="Latvia">Latvia</option>
+   <option value="Lebanon">Lebanon</option>
+   <option value="Lesotho">Lesotho</option>
+ </select>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+ <label>Trainer Preference:</label>
+
+<br/>
+<div class="form-group radio">
+  <label><input type="radio" name="optradio" checked>Male Tranier</label>
+</div>
+<div class="form-group radio">
+  <label><input type="radio" name="optradio">Female Trainer</label>
+</div>
+<div class="form-group radio">
+  <label><input type="radio" name="optradio">No preference</label>
+</div>
+
+<div class="form-group radio">
+  <label><input type="radio" name="optradio"value="T" onclick="toggleTextbox('T')">Trainer's Name</label>
+
+
+ <input type="text" class="form-control" id="txtText" disabled="disabled"/>
+</div>
+
+<div class="form-group radio">
+  <label><input type="radio" name="optradio" value="T" onclick="toggleTextbox('T')">Others</label>
+
+
+ <input type="text" class="form-control" id="txtText1"  disabled="disabled"/>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+ <div class="form-group">
+<p>Do you need physiotherapist..?</p>
+
+<label><input type="radio" name="optradio" checked>Yes</label>
+
+
+<label><input type="radio" name="optradio" checked>No</label>
+
+
+</div>
+
+
+<div class="form-group">
+
+<label for="Appointment">Appointment</label>
+<table class="table" border="3"cellspacing="10" align="center">
+<thead>
+<tr>
+<td align="center">DAY </td>
+ <td>7:00-9:00</td>
+ <td>9:00-11:00
+ <td>11:00-1:00
+ <td>1:00-3:00
+ <td>3:00-5:00
+ 
+</tr>
+</thead>
+<tbody>
+<tr>
+ <td align="center">MONDAY
+ <td align="center">
+<input type="radio"  id="defaultUnchecked" name="defaultExampleRadios">
+  <td align="center"><font color="blue">
+  <input type="radio" id="defaultUnchecked" name="defaultExampleRadios">
+  <br>
+ <td align="center"><font color="pink">
+  <input type="radio"  id="defaultUnchecked" name="defaultExampleRadios">
+  <br>
+ <td align="center"><font color="red">
+  <input type="radio" id="defaultUnchecked" name="defaultExampleRadios">
+  <br>
+ 
+ <td align="center"><font color="maroon">
+  <input type="radio" id="defaultUnchecked" name="defaultExampleRadios">
+  <br>
+ 
+</tr>
+<tr>
+ <td align="center">TUESDAY
+ <td align="center"><font color="blue"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="red"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="pink"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+ <td align="center"><font color="orange"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><BR>
+ <td align="center"><font color="maroon"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+</tr>
+<tr>
+ <td align="center">WEDNESDAY
+ <td align="center"><font color="pink"><input type="radio"  id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="orange"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><BR>
+ <td align="center"><font color="brown"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+ <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+  <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+</tr>
+<tr>
+ <td align="center">THURSDAY
+ <td align="center"><font color="pink"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="orange"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><BR>
+ <td align="center"><font color="brown"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+ <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+  <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+
+</tr>
+<tr>
+ <td align="center">FRIDAY
+<td align="center"><font color="pink"><input type="radio" " id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="orange"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><BR>
+ <td align="center"><font color="brown"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+ <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+  <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+</tr>
+<tr>
+ <td align="center">SATURDAY
+ <td align="center"><font color="pink"><input type="radio"  id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="orange"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><BR>
+ <td align="center"><font color="brown"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+ <td align="center"><font color="green"><input type="radio"  id="defaultUnchecked" name="defaultExampleRadios"><br>
+  <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+</tr>
+
+ <td align="center">SUNDAY
+ <td align="center"><font color="pink"><input type="radio"  id="defaultUnchecked" name="defaultExampleRadios"><br>
+ <td align="center"><font color="orange"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><BR>
+ <td align="center"><font color="brown"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+ 
+ <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+  <td align="center"><font color="green"><input type="radio" id="defaultUnchecked" name="defaultExampleRadios"><br>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="form-group radio">
+  <label><input type="radio" name="optradio" checked value="four" onclick="calculateTotal()">Four Sessions Only (INR 400/Session)</label>
+</div>
+<div class="form-group radio">
+  <label><input type="radio" name="optradio" checked value="12" onclick="calculateTotal()">Twelve Sessions Only (INR 300/Session)</label>
+</div>
+<div class="form-group radio">
+  <label><input type="radio" name="optradio" checked>Other</label>
+ <input type="text" class="form-control" id="txtText1"/>
+</div>
+</div>
+
+<div class="form-group" id="result">
+<label for="quote">Quote</label>
+<br/>
+<input type="text" class="form-control col-md-4">
+
+<input type="text" class="form-control col-md-4">
+
+
+</div>
+
+
+ </form>
+</div>
+</div>
+ <div class="form-group">
+    
+     <a  href="appoint.html"> <input type="submit"  class="form-control btn-success" id="pwd" required></a>
+    </div>
+
+
+
+
+
+<script>
+var prices = new Array();
+prices[one]=500;
+prices[four]=400*4;
+prices[12]=300*12;
+function displayRadioValue() { 
+            var ele = document.getElementsByName('prices'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+                document.getElementById("result").innerHTML
+                        = "prices: "+ele[i].value; 
+            } 
+        } 
+    
+
+</script>
+<script>
+var age = +document.getElementById('age1').value;
+
+if ( !( age > 18 && age<60 ) ){
+
+        alert("The age must be a number between 18 and 60");
+        return false;
+}
+
+return true;
+</script>
+<script>
+var placeSearch, autocomplete;
+
+// List all address components (corresponds to form field IDs and Google address object)
+var componentForm = {
+  autocomplete: ['street_number', 'route'],
+  inputCity: 'locality',
+  inputState: 'administrative_area_level_1',
+  inputZip: 'postal_code',
+  inputCounty: 'administrative_area_level_2',
+  inputCountry: 'country'
+};
+
+// Create autocomplete object based on the autocomplete ("street") field
+// Location type restricted to geocode
+function initAutocomplete() {
+  autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */ (document.getElementById('autocomplete')),
+      {type: ['geocode']});
+
+  // Call fillInAddress when user selects an address from dropdown
+  autocomplete.addListener('place_changed', fillInAddress);
+}
+
+// Fill fields with values from Google Maps autocomplete object
+function fillInAddress() {
+
+  // Get place data from autocomplete object
+  var place = autocomplete.getPlace();
+  console.log(place);
+  
+  // Enable each field, then fill them with the corresponding value from the place object
+  for (var component in componentForm) {
+    document.getElementById(component).disabled = false;
+    document.getElementById(component).value = search(componentForm[component], place.address_components);
+  }
+
+  // Original Google Implementation - do not use
+  // Get each component of the address from the place
+  // object and fill the corresponding field
+//   for (var i = 0; i < place.address_components.length; i++) {
+
+//     var addressType = place.address_components[i].types[0];
+
+//     if (componentForm[addressType]) {
+//       var val = place.address_components[i][componentForm[addressType]];
+//       document.getElementById(addressType).value = val;
+//     }
+//   }
+  
+  // Fill the autocomplete field with values from the place object
+  // If a street number is not found, set the field to route only.
+  if (search("street_number", place.address_components) != "") {
+    document.getElementById("autocomplete").value = search("street_number", place.address_components) + " ";
+  }
+  document.getElementById("autocomplete").value += search("route", place.address_components);
+  
+  // Search the passed object for a specified address component/type and return the short_name value of the matched component/type
+  // If requested type does not exist in the placeObject, return an empty string
+  function search(type, placeObject) {
+    for (var i = 0; i < placeObject.length; i++) {
+      if (placeObject[i].types[0] === type) {
+        return placeObject[i].short_name;
+      } else if (i === placeObject.length - 1) {
+        return "";
+      }
+    }
+  }
+}
+
+function Validate(txt) {
+    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
+}
+function validatephone(phone) 
+{
+    var maintainplus = '';
+    var numval = phone.value
+    if ( numval.charAt(0)=='+' )
+    {
+        var maintainplus = '';
+    }
+    curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
+    phone.value = maintainplus + curphonevar;
+    var maintainplus = '';
+    phone.focus;
+}
+
+
+function email_validate(exampleInputEmail1)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(exampleInputEmail1) == false)
+    {
+    document.getElementById("status").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("status").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+    }
+}
+function validateAge(age) {
+    var input = age.value;
+    if(input>=18&&input<=60) {
+        return true;
+    }
+    else {
+        alert("Age must be between 18 and 25 | You have entered "+input);
+        return false;
+    }
+}
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+
+</script>
+<script type="text/javascript">
+function toggleTextbox(opt)
+{
+    if (opt == 'T')
+        document.getElementById('txtText').disabled = false;
+    else
+        document.getElementById('txtText1').disabled = true;
+}
+
+
+    </script> 
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,373 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style>
+   /*label{
+    color: white;
+  }*/
+  .form{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+  }
+input{
+  width: 100%;
+  margin: 20px 0;
+  background: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 1px solid white;
+}
+textarea{
+  width: 100%;
+  margin: 20px 0;
+  background: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+body
+
+{
+background-image:url("D:\fitness.jpg") ;
+  
+  font-family: Arial, Helvetica, sans-serif; 
+  font
+}
+* {box-sizing: border-box;
+ }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: primary/*#45a049*/;
+}
+
+
+.container {
+  border-radius: 5px;
+background-color:transparent;
+ 
+
+ /*background-color: #f2f2f2*/ ;
+  padding: 20px;
+}
+</style>
+<style>
+  .async-hide {
+    opacity: 0 !important
+  }
+
+</style>
+<style>
+  .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: aqua;
+
+   
+}
+input, label {
+  margin: 5px 5px;
+}
+
+.form-group {
+  margin: 30px auto;
+  width: 450px;
+}
+
+.form-control {
+  float: left;
+}
+
+#inputStreet {
+  width: 100%;
+}
+
+#inputCity {
+  width: 50%;
+}
+
+#inputState {
+  width: 15%;
+}
+
+#inputZip {
+  width: 28%;
+}
+
+#inputCounty {
+  width: 45%;
+}
+
+#inputCountry {
+  width: 50%;
+}
+
+</style>
+</head>
+<body >
+ 
+
+<nav class="navbar navbar-expand bg-dark">
+ <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="myhome.html">Home</a>
+  <a href="PROJECT.html">PlaceAppointment</a>
+  <a href="appoint.html">ViewAppointment</a>
+  <a href="contact.html">ContactUs</a>
+</div>
+<br/>
+     <div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+
+    
+</div>      
+               <img src="logo.jpg" class="img-circle" alt="logo"
+width=5%" height="50px">
+
+   <a class="navbar-brand" href="front.html" data-activates="slide-out"></a>
+
+
+</span></a>
+ </div>
+<div class="navbar-header">
+
+
+
+  
+     <ul class="navbar-nav">
+    <!-- <img src="C:\Users\HI\Desktop" alt=LOGO width="10px" height="10px align-left"> -->
+    <li class="nav-item">
+      <a class="nav-link" href="myhome.html">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="PROJECT.HTML">PLACE APPOINTMENT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="appoint.html">VIEW APPOINTMENT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">CONTACT US</a>
+    </li>
+  </ul>
+
+</nav>
+
+
+
+<div>
+<h1 style="text-align:center">Fitness Contact Form</h1>
+</div>
+<div class="container">
+ 
+  <form>
+   
+ <!--  <form action="/action_page.php"> -->
+    <!-- <label for="fname">Name</label> -->
+    <input type="text" id="fname" name="firstname" onkeyup = "Validate(this)" placeholder="Your name">
+
+    <!-- <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
+
+    <!-- <label for="fname">Phone No</label> -->
+    <input type="text" id="phone" name="phone" onkeyup="validatephone(this)" placeholder="Enter your Phone Number" >
+
+   <!--  <label for="fname">e-mail</label> -->
+    <input type="text" id="email" name="email" onchange="email_validate(this.value)" placeholder="Enter your email">
+
+    <!-- <input type="text" id="email" name="email" placeholder="Type your enquiry here "> -->
+
+
+
+    <!-- <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="India">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select> -->
+
+   <!--  <label for="subject">Subject</label> -->
+    <textarea id="subject" name="subject" placeholder="Type Your enquiry here" style="height:100px"></textarea>
+
+    <input type="submit" value="Enquiry" >
+  </form>
+  </div>
+</div>
+<script>
+function Validate(txt) {
+    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
+}
+function validatephone(phone) 
+{
+    var maintainplus = '';
+    var numval = phone.value
+    if ( numval.charAt(0)=='+' )
+    {
+        var maintainplus = '';
+    }
+    curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
+    phone.value = maintainplus + curphonevar;
+    var maintainplus = '';
+    phone.focus;
+}
+function email_validate(email)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(email) == false)
+    {
+    document.getElementById("status").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("status").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+    }
+}
+</script>
+<script>
+function Validate(txt) {
+    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
+}
+function validatephone(phone) 
+{
+    var maintainplus = '';
+    var numval = phone.value
+    if ( numval.charAt(0)=='+' )
+    {
+        var maintainplus = '';
+    }
+    curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
+    phone.value = maintainplus + curphonevar;
+    var maintainplus = '';
+    phone.focus;
+}
+function email_validate(email)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(email) == false)
+    {
+    document.getElementById("status").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("status").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+    }
+}
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
